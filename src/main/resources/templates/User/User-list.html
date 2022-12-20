@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="iso-8859-1">
+<title>Insert title here</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-info">
+<div class="container">
+<table class="table table-bordered table-stripped">
+<thead><tr class="bg-primary"><th>ID</th>
+<th>Items</th>
+<th>Function</th>
+<th>Specs</th></tr>
+</thead>
+<tbody class="bg-warning">
+<tr th:each ="list : ${items}">
+<td th:text="${list.getI()}"></td>
+<td th:text="${list.n}"></td>
+<td th:text="${list.f}"></td>
+<th th:text="${list.s}"></th>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
